@@ -1,0 +1,174 @@
+/* error404.css */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* 404 container */
+#blog {
+    position: relative;
+    height: 70vh;
+}
+
+#blog .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 520px;
+    width: 100%;
+}
+
+/* Falling lines animation */
+#blog .notfound-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#blog .notfound-bg>div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #eee;
+}
+
+#blog .notfound-bg>div:nth-child(1) {
+    left: 20%;
+}
+
+#blog .notfound-bg>div:nth-child(2) {
+    left: 40%;
+}
+
+#blog .notfound-bg>div:nth-child(3) {
+    left: 60%;
+}
+
+#blog .notfound-bg>div:nth-child(4) {
+    left: 80%;
+}
+
+#blog .notfound-bg>div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.5px;
+    transform: translateY(-160px);
+    height: 160px;
+    width: 2px;
+    background-color: #dc3545;
+    /* your site's red/danger color */
+}
+
+/* Different speeds and delays for asynchronous effect */
+#blog .notfound-bg>div:nth-child(1):after {
+    animation: drop 3s infinite linear;
+    animation-delay: 0.1s;
+}
+
+#blog .notfound-bg>div:nth-child(2):after {
+    animation: drop 2.5s infinite linear;
+    animation-delay: 0.7s;
+}
+
+#blog .notfound-bg>div:nth-child(3):after {
+    animation: drop 3.5s infinite linear;
+    animation-delay: 0.4s;
+}
+
+#blog .notfound-bg>div:nth-child(4):after {
+    animation: drop 2.2s infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes drop {
+    90% {
+        height: 20px;
+    }
+
+    100% {
+        height: 160px;
+        transform: translateY(calc(100vh + 160px));
+    }
+}
+
+/* 404 text */
+#blog .notfound-404 {
+    height: 180px;
+    line-height: 180px;
+}
+
+#blog .notfound-404 h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    margin: 0;
+    color: #dc3545;
+    text-shadow: 2px 2px #ccc;
+}
+
+#blog h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: #333;
+}
+
+#blog p {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* Button */
+#blog a.btn {
+    font-family: 'Lato', sans-serif;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #dc3545;
+    transition: 0.2s all;
+}
+
+#blog a.btn:hover {
+    background-color: #bd2130;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+    #blog .notfound-404 {
+        height: 122px;
+        line-height: 122px;
+    }
+
+    #blog .notfound-404 h1 {
+        font-size: 122px;
+    }
+
+    #blog h2 {
+        font-size: 26px;
+    }
+}
