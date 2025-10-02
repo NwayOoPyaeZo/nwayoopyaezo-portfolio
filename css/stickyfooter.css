@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure body takes at least full viewport height */
+}
+
+.page-wrapper {
+    flex: 1 0 auto;
+    /* Grows to fill available space, doesn't shrink */
+}
+
+footer {
+    flex-shrink: 0;
+    /* Prevents footer from shrinking */
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer a,
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+footer a:hover,
+.footer-links a:hover {
+    color: #00aaff;
+}
