@@ -1,21 +1,17 @@
 /* error404.css */
 
-/* Reset */
-* {
+/* Reset (scoped to #blog to avoid global conflict) */
+#blog * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f9f9f9;
-}
-
-/* 404 container */
 #blog {
     position: relative;
     height: 70vh;
+    background-color: #1a1a1a;
+    /* Match dark theme background */
 }
 
 #blog .notfound {
@@ -26,6 +22,8 @@ body {
     text-align: center;
     max-width: 520px;
     width: 100%;
+    z-index: 2;
+    /* Ensure content is above the background animation */
 }
 
 /* Falling lines animation */
@@ -36,6 +34,8 @@ body {
     top: 0;
     bottom: 0;
     overflow: hidden;
+    z-index: 1;
+    /* Place animation below the content */
 }
 
 #blog .notfound-bg>div {
@@ -43,7 +43,8 @@ body {
     top: 0;
     bottom: 0;
     width: 1px;
-    background-color: #eee;
+    background-color: transparent;
+    /* Remove the visible path */
 }
 
 #blog .notfound-bg>div:nth-child(1) {
@@ -71,7 +72,7 @@ body {
     height: 160px;
     width: 2px;
     background-color: #dc3545;
-    /* your site's red/danger color */
+    /* Red danger color preserved */
 }
 
 /* Different speeds and delays for asynchronous effect */
@@ -118,7 +119,9 @@ body {
     font-weight: 700;
     margin: 0;
     color: #dc3545;
-    text-shadow: 2px 2px #ccc;
+    /* Red for 404 number */
+    text-shadow: 2px 2px #222222;
+    /* Dark shadow for contrast */
 }
 
 #blog h2 {
@@ -128,18 +131,20 @@ body {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1.6px;
-    color: #333;
+    color: #f2f2f2;
+    /* Light gray to match dark theme headings */
 }
 
 #blog p {
     font-family: 'Lato', sans-serif;
-    color: #555;
+    color: #bbbbbb;
+    /* Softer gray for text */
     font-weight: 400;
     margin-top: 20px;
     margin-bottom: 25px;
 }
 
-/* Button */
+/* Button (styled anchor) */
 #blog a.btn {
     font-family: 'Lato', sans-serif;
     padding: 10px 30px;
@@ -150,11 +155,24 @@ body {
     border-radius: 4px;
     text-decoration: none;
     background-color: #dc3545;
+    /* Red button */
     transition: 0.2s all;
+    border: 2px solid #dc3545;
+    /* Add border for consistency with dark theme buttons */
+    cursor: pointer;
+    /* Indicate clickability */
+    position: relative;
+    /* Establish stacking context */
+    z-index: 3;
+    /* Ensure button is above all other elements */
+    text-align: center;
+    /* Center text within the button */
 }
 
 #blog a.btn:hover {
     background-color: #bd2130;
+    /* Darker red on hover */
+    border-color: #bd2130;
 }
 
 /* Responsive */
