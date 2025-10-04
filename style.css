@@ -664,11 +664,22 @@ xclip
     position: relative;
     -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    bottom: -50px;
+    right: -50px;
+    z-index: 0;
+     margin-left: 20px;
 }
 
 .right-box-pro img {
     position: relative;
     z-index: 2;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
 .right-box-pro::before {
@@ -678,8 +689,10 @@ xclip
     height: 100%;
     position: absolute;
     bottom: -20px;
-    right: -20px;
+    right: 10px;
     z-index: 0;
+    background-size: cover;
+    opacity: 0.8;
 }
 
 .services-inner-box {
@@ -2135,7 +2148,60 @@ select.mobile-device {
 }
 
 #contact {
-    background:  #1a1a1a;
+    background-image: url('images/bg.png');
+    background-size: cover;
+    /* Ensures the image covers the entire section */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents image tiling */
+    position: relative;
+    /* For overlay positioning */
+    overflow: hidden;
+    /* Keep blur inside */
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: inherit;
+    /* same background */
+    background-size: inherit;
+    background-position: inherit;
+    background-repeat: inherit;
+
+    filter: blur(8px);
+    /* 🔹 blur the background */
+    transform: scale(1.1);
+    /* prevent edges from showing */
+    z-index: 0;
+    /* stay below content */
+}
+
+#contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent dark overlay */
+    z-index: 1;
+    /* sits above the blur, but below content */
+}
+
+
+#contact .container {
+    position: relative;
+    /* Ensures content stays above overlay */
+    z-index: 2;
+    /* Above the overlay */
 }
 
 #contact .section-title p {
