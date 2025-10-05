@@ -378,6 +378,8 @@ a img.aligncenter {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     background-color: #000;
     z-index: 0;
     opacity: .6;
@@ -388,18 +390,22 @@ a img.aligncenter {
     display: table-cell;
     vertical-align: middle;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .heading h1 {
     color: #ffffff;
+     margin-bottom: 15px;
     font-weight: 700;
     font-size: 62px;
     text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(212,175,55,0.6); 
 }
 
 .heading p {
+    margin-bottom: 25px;
     font-size: 18px;
+    color: #ddd;
     padding: 20px 0px;
 }
 
@@ -616,7 +622,7 @@ xclip
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0px;
+    margin-top: 25px;
     cursor: pointer;
 }
 
@@ -666,16 +672,17 @@ xclip
     box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
     max-width: 350px;
     bottom: -50px;
-    right: -50px;
+    right: -90px;
     z-index: 0;
-     margin-left: 20px;
+    margin-left: 20px;
 }
 
 .right-box-pro img {
     position: relative;
     z-index: 2;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 350px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #D4AF37;
@@ -695,10 +702,26 @@ xclip
     opacity: 0.8;
 }
 
+/* Services Section */
 .services-inner-box {
     padding: 15px;
     background: #1a1a1a;
     margin-bottom: 30px;
+    border-radius: 10px;
+    /* Added for a modern look */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
+    position: relative;
+    /* For proper layering */
+}
+
+.services-inner-box:hover {
+    transform: translateY(-10px);
+    /* Lifts the box slightly */
+    background-color: #2a2a2a;
+    /* Slightly darker background on hover */
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    /* Gold shadow effect */
 }
 
 .ser-icon {
@@ -706,17 +729,47 @@ xclip
     height: 90px;
     text-align: center;
     line-height: 90px;
+    margin: 0 auto 15px;
+    /* Centers and adds space below */
+    transition: transform 0.3s, background-color 0.3s;
+    /* Smooth transitions for icon */
 }
 
 .ser-icon i {
     font-size: 50px;
     color: #ffffff;
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.services-inner-box:hover .ser-icon {
+    transform: scale(1.2);
+    /* Enlarges the icon */
+}
+
+.services-inner-box:hover .ser-icon i {
+    color: #D4AF37;
+    /* Changes to gold on hover */
 }
 
 .services-inner-box h2 {
     font-size: 22px;
     font-weight: 600;
     color: #f2f2f2;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.services-inner-box:hover h2 {
+    color: #D4AF37;
+    /* Changes to gold on hover */
+}
+
+.services-inner-box p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0;
 }
 
 /*------------------------------------------------------------------
