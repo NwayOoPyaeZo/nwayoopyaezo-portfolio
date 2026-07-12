@@ -11,7 +11,6 @@ export function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="A practical builder with a data-first mindset."
-        description="This section keeps the original portfolio story but presents it through a cleaner TypeScript and Tailwind structure."
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_0.9fr]">

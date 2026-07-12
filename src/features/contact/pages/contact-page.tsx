@@ -10,7 +10,6 @@ export function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Let’s build something clear and useful."
-        description="The contact form keeps the original FormSubmit setup, while the layout gets a modern React treatment."
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
