@@ -9,7 +9,6 @@ export function PortfolioPage() {
       <PageHeader
         eyebrow="Portfolio"
         title="Selected work and visual studies."
-        description="These cards preserve the original project ideas while presenting them through a tighter grid and hover treatment."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {portfolioItems.map((item) => (

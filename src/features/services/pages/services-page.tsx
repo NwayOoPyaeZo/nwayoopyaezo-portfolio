@@ -9,7 +9,6 @@ export function ServicesPage() {
       <PageHeader
         eyebrow="Services"
         title="From data analysis to front-end delivery."
-        description="A focused list of the work I can support, rebuilt as a modular React component set."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {services.map((service) => (

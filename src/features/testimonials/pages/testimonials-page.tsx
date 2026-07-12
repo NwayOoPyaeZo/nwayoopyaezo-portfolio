@@ -9,7 +9,6 @@ export function TestimonialsPage() {
       <PageHeader
         eyebrow="Testimonials"
         title="This section is being prepared."
-        description="The original page was a placeholder, so this React version keeps it honest while giving the layout a proper home."
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {testimonialsPreview.map((item) => (
