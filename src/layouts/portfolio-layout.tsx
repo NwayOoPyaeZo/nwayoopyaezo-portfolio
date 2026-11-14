@@ -94,7 +94,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-slate-500">
-        © {year} {site.name}. Built with React, Tailwind, and shadcn-style components.
+        © 2026 Soe Pyae Sone. Built with React, TypeScript and Tailwind.
       </div>
     </footer>
   );

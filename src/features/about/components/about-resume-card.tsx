@@ -9,7 +9,7 @@ export function AboutResumeCard() {
     <Card className="border-white/10 bg-white/5">
       <CardHeader>
         <CardTitle>Resume</CardTitle>
-        <CardDescription>Download the latest CV and share it with your team or recruiter.</CardDescription>
+        <CardDescription>Download my latest CV (PDF).</CardDescription>
       </CardHeader>
       <CardContent>
         <Button asChild>

@@ -3,5 +3,4 @@ export const aboutPoints = [
   'SQL: SQL Server and PostgreSQL, JOINs, window functions',
   'Power BI (basic): KPI dashboards with slicers',
   'HTML, CSS, JavaScript, TypeScript, React, Tailwind and Git',
-  'Attention to detail, problem-solving, teamwork',
 ];

@@ -12,7 +12,7 @@ export const site = {
   resume: asset('assets/uploads/Resume.pdf'),
   logo: asset('assets/img/logo.svg'),
   heroImage: asset('assets/uploads/portfolio10.png'),
-  aboutImage: asset('assets/uploads/portfolio10.png'),
+  profileImage: asset('assets/uploads/profile-pic.png'),
   frontEndProjectImage: asset('assets/uploads/portfolio101.png'),
   databelDashboardImage: asset('assets/uploads/dataAnalysisProjects/Databel_churned_customers_dashboard.jpg'),
   pnlDashboardImage: asset('assets/uploads/dataAnalysisProjects/P&L analysis.jpg'),

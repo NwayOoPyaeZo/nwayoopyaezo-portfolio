@@ -11,7 +11,7 @@ import { aboutHighlights, featuredPortfolioItems, featuredServices, specialties,
 export function HomePage() {
   return (
     <div className="bg-radial-aurora">
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-14 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:px-12 lg:py-20">
+      <section className="mx-auto grid items-center gap-12 max-w-7xl px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-20">
         <div className="flex flex-col justify-center">
           <SectionLabel>ASPIRING DATA ANALYST</SectionLabel>
           <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -30,9 +30,9 @@ export function HomePage() {
             </Button>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2">
             {specialties.map((item) => (
-              <Badge key={item} variant="secondary" className="bg-white/8 text-slate-100">
+              <Badge key={item} variant="secondary" className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm">
                 {item}
               </Badge>
             ))}
@@ -42,15 +42,15 @@ export function HomePage() {
         <div className="relative lg:justify-self-end">
           <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-amber-400/15 blur-3xl" />
           <div className="absolute -bottom-8 right-0 h-56 w-56 rounded-full bg-cyan-300/10 blur-3xl" />
-          <Card className="relative mx-auto w-full max-w-[320px] overflow-hidden border-white/10 bg-slate-950/70 p-0 shadow-2xl shadow-black/30 lg:mx-0">
-            <div className="aspect-[4/5] w-full overflow-hidden bg-slate-900">
-              <img src={site.heroImage} alt={site.name} className="h-full w-full object-cover object-[50%_35%]" />
+          <Card className="relative w-full max-w-lg justify-self-end overflow-hidden border-white/10 bg-slate-950/70 p-0 shadow-2xl shadow-black/30">
+            <div className="w-full overflow-hidden rounded-2xl bg-slate-900">
+              <img src={site.heroImage} alt="Portrait of Soe Pyae Sone" className="aspect-[4/3] w-full object-cover object-[50%_70%]" />
             </div>
-            <div className="grid gap-3 p-4 sm:grid-cols-3">
+            <div className="flex flex-col px-5 py-3">
               {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-slate-400">{stat.label}</p>
-                  <p className="mt-1.5 text-xs font-medium leading-5 text-white">{stat.value}</p>
+                <div key={stat.label} className="flex items-center justify-between gap-4 border-b border-white/10 py-2 last:border-b-0">
+                  <p className="whitespace-nowrap text-sm uppercase tracking-[0.18em] text-slate-400">{stat.label}</p>
+                  <p className="whitespace-nowrap text-right text-sm font-medium leading-5 text-white">{stat.value}</p>
                 </div>
               ))}
             </div>
@@ -58,7 +58,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-12 lg:py-16">
+      <section className="mx-auto max-w-7xl px-6 py-8 lg:px-12 lg:py-12">
         <Card className="grid gap-8 border-white/10 bg-white/5 p-6 lg:grid-cols-[1fr_0.9fr] lg:p-8">
           <div>
             <SectionLabel>About</SectionLabel>

@@ -13,13 +13,13 @@ export function AboutPage() {
         title="About me"
       />
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+      <div className="mt-12 grid items-start gap-6 lg:grid-cols-[1.5fr_1fr]">
         <AboutProfileCard />
 
         <div className="space-y-6">
           <Card className="overflow-hidden border-white/10 bg-slate-950/70 p-0">
-            <div className="aspect-[4/3] max-h-[420px] w-full">
-              <img src={site.aboutImage} alt={site.name} className="h-full w-full object-cover" />
+            <div className="aspect-square max-h-[400px] w-full">
+              <img src={site.profileImage} alt="Portrait of Soe Pyae Sone" className="h-full w-full object-cover object-center" />
             </div>
           </Card>
           <AboutResumeCard />
