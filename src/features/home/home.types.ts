@@ -16,4 +16,6 @@ export type HomePortfolioTeaser = {
   category: string;
   description: string;
   image: string;
+  tools?: string[];
+  link?: string;
 };

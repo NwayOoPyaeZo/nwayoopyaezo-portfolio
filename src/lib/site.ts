@@ -13,6 +13,8 @@ export const site = {
   logo: asset('assets/img/logo.svg'),
   heroImage: asset('assets/uploads/portfolio10.png'),
   aboutImage: asset('assets/uploads/portfolio10.png'),
+  databelDashboardImage: asset('assets/uploads/dataAnalysisProjects/Databel_churned_customers_dashboard.jpg'),
+  pnlDashboardImage: asset('assets/uploads/dataAnalysisProjects/P&L analysis.jpg'),
   galleryImages: [
     asset('assets/uploads/gallery_img-01.jpg'),
     asset('assets/uploads/gallery_img-02.jpg'),

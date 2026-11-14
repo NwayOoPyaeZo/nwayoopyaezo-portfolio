@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
+import { ExternalLink } from 'lucide-react';
 
 import type { HomePortfolioTeaser } from '../home.types';
 
@@ -15,6 +16,20 @@ export function HomePortfolioCard({ item }: { item: HomePortfolioTeaser }) {
           </Badge>
           <h3 className="text-xl font-semibold text-white">{item.title}</h3>
           <p className="mt-2 text-sm leading-6 text-slate-300">{item.description}</p>
+          {item.tools?.length ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {item.tools.map((tool) => (
+                <span key={tool} className="text-xs text-amber-200">
+                  {tool}
+                </span>
+              ))}
+            </div>
+          ) : null}
+          {item.link ? (
+            <a href={item.link} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-amber-200">
+              View project <ExternalLink className="h-4 w-4" />
+            </a>
+          ) : null}
         </div>
       </div>
     </Card>

@@ -3,4 +3,6 @@ export type PortfolioCardData = {
   category: string;
   description: string;
   image: string;
+  tools?: string[];
+  link?: string;
 };

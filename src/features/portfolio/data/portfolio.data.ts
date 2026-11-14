@@ -4,39 +4,19 @@ import type { PortfolioCardData } from '../portfolio.types';
 
 export const portfolioItems: PortfolioCardData[] = [
   {
-    title: 'Mini Shop Inventory System',
-    category: 'Data workflow',
-    description: 'Streamlined inventory operations with a modular, easy-to-extend structure.',
-    image: site.galleryImages[0],
+    title: 'Databel Customer Churn Analysis',
+    category: 'Data analysis',
+    description: 'Analyzed customer churn patterns in Excel and translated the findings into practical retention insights.',
+    image: site.databelDashboardImage,
+    tools: ['Excel'],
+    link: 'https://github.com/NwayOoPyaeZo/DataAnalysisProjects',
   },
   {
-    title: 'Power BI Sales Dashboard',
-    category: 'Dashboard design',
-    description: 'A clear reporting layout that helps surface sales patterns quickly.',
-    image: site.galleryImages[1],
-  },
-  {
-    title: 'Personal Portfolio Website',
-    category: 'Web development',
-    description: 'A responsive portfolio built with Bootstrap and custom styling.',
-    image: site.galleryImages[2],
-  },
-  {
-    title: 'Operations Snapshot',
-    category: 'Analytics',
-    description: 'A concise visual summary for tracking recurring workflow metrics.',
-    image: site.galleryImages[3],
-  },
-  {
-    title: 'Brand Landing Page',
-    category: 'UI design',
-    description: 'A clean landing page layout with strong hierarchy and contrast.',
-    image: site.galleryImages[4],
-  },
-  {
-    title: 'Insight Board',
-    category: 'Visualization',
-    description: 'A concept board for turning raw data into readable, actionable stories.',
-    image: site.galleryImages[5],
+    title: 'Budget vs Actual P&L Dashboard',
+    category: 'Financial dashboard',
+    description: 'Compared budget and actual performance in an interactive dashboard to highlight variances and business trends.',
+    image: site.pnlDashboardImage,
+    tools: ['Excel', 'Power BI'],
+    link: 'https://github.com/NwayOoPyaeZo/DataAnalysisProjects',
   },
 ];
