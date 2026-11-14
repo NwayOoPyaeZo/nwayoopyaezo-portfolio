@@ -4,12 +4,24 @@ import { ExternalLink } from 'lucide-react';
 
 import type { PortfolioCardData } from '../portfolio.types';
 
-export function PortfolioCard({ item }: { item: PortfolioCardData }) {
+export function PortfolioCard({ item, onSelect }: { item: PortfolioCardData; onSelect: () => void }) {
   return (
-    <Card className="group overflow-hidden border-white/10 bg-white/5 p-0">
+    <Card
+      className="group cursor-pointer overflow-hidden border-white/10 bg-white/5 p-0"
+      role="button"
+      tabIndex={0}
+      aria-label={`Open ${item.title}`}
+      onClick={onSelect}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onSelect();
+        }
+      }}
+    >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/10 opacity-95" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-5">
           <Badge variant="secondary" className="mb-3 bg-white/10 text-white">
             {item.category}
@@ -26,9 +38,9 @@ export function PortfolioCard({ item }: { item: PortfolioCardData }) {
             </div>
           ) : null}
           {item.link ? (
-            <a href={item.link} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-amber-200">
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-amber-200">
               View project <ExternalLink className="h-4 w-4" />
-            </a>
+            </span>
           ) : null}
         </div>
       </div>

@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { PageHeader } from '@/layouts/section-shell';
 
 import { PortfolioCard } from '../components/portfolio-card';
+import { ProjectLightbox } from '../components/project-lightbox';
 import { portfolioItems } from '../data/portfolio.data';
+import type { PortfolioCardData } from '../portfolio.types';
 
 const tabs = ['Data Analysis', 'Front-End'] as const;
 
 export function PortfolioPage() {
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>('Data Analysis');
+  const [selectedProject, setSelectedProject] = useState<PortfolioCardData | null>(null);
   const visibleItems = portfolioItems.filter((item) => item.category === activeTab);
 
   return (
@@ -35,9 +38,10 @@ export function PortfolioPage() {
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {visibleItems.map((item) => (
-          <PortfolioCard key={item.title} item={item} />
+          <PortfolioCard key={item.title} item={item} onSelect={() => setSelectedProject(item)} />
         ))}
       </div>
+      {selectedProject ? <ProjectLightbox project={selectedProject} onClose={() => setSelectedProject(null)} /> : null}
     </section>
   );
 }
