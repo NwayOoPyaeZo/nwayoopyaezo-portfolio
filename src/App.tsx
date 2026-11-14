@@ -7,9 +7,8 @@ import { contactRoutes } from '@/features/contact/contact.routes';
 import { homeRoutes } from '@/features/home/home.routes';
 import { portfolioRoutes } from '@/features/portfolio/portfolio.routes';
 import { servicesRoutes } from '@/features/services/services.routes';
-import { testimonialsRoutes } from '@/features/testimonials/testimonials.routes';
 
-const appRoutes = [...homeRoutes, ...aboutRoutes, ...servicesRoutes, ...portfolioRoutes, ...testimonialsRoutes, ...contactRoutes];
+const appRoutes = [...homeRoutes, ...aboutRoutes, ...servicesRoutes, ...portfolioRoutes, ...contactRoutes];
 
 function ScrollToTop() {
   const location = useLocation();

@@ -46,7 +46,6 @@ src/
 │   ├── home/
 │   ├── portfolio/
 │   ├── services/
-│   └── testimonials/
 ├── layouts/
 │   ├── portfolio-layout.tsx
 │   └── section-shell.tsx
@@ -76,7 +75,6 @@ Feature names should reflect the portfolio section rather than the implementatio
 | About section | `src/features/about/` |
 | Services section | `src/features/services/` |
 | Portfolio section | `src/features/portfolio/` |
-| Testimonials section | `src/features/testimonials/` |
 | Contact section | `src/features/contact/` |
 
 ## File Placement Rules

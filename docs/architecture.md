@@ -4,7 +4,7 @@
 
 This repository is the **Nway Oo Pyae Zo Portfolio** and it follows a **Feature-Based Architecture** for a React + TypeScript + Vite + Tailwind CSS + TanStack Query stack.
 
-The rule is simple: every portfolio section stays close to the code that powers it. Home, About, Services, Portfolio, Testimonials, and Contact should each own their own UI, data, and routing details.
+The rule is simple: every portfolio section stays close to the code that powers it. Home, About, Services, Portfolio, and Contact should each own their own UI, data, and routing details.
 
 ## Core Principles
 

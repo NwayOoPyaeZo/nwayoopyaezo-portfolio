@@ -21,7 +21,6 @@ export const site = {
     asset('assets/uploads/gallery_img-05.jpg'),
     asset('assets/uploads/gallery_img-06.jpg'),
   ],
-  testimonialImages: [asset('assets/uploads/testi_01.png'), asset('assets/uploads/testi_02.png'), asset('assets/uploads/testi_03.png')],
   socials: [
     { label: 'Facebook', href: 'https://web.facebook.com/nway.oo.pyae.zo.2025' },
     { label: 'Line', href: 'https://line.me/ti/p/pzGtX07TrQ' },
@@ -35,5 +34,4 @@ export const navigation = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Testimonials', href: '/testimonials' },
 ];
