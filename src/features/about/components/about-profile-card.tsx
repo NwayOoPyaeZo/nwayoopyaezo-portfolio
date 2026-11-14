@@ -1,7 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { site } from '@/lib/site';
-
 import { aboutPoints } from '../data/about.data';
 
 export function AboutProfileCard() {
@@ -10,18 +8,18 @@ export function AboutProfileCard() {
       <CardHeader>
         <CardTitle>About me</CardTitle>
         <CardDescription>
-          Hello, my name is {site.alternateName} (aka {site.name}). I am a front-end developer and data analyst who enjoys building responsive websites and turning data into practical insight.
+          I’m a recent graduate (GPA 3.91/4.00) working toward a junior data analyst role.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4 text-sm leading-7 text-slate-300">
         <p>
-          I work across HTML, CSS, JavaScript, TypeScript, React, SQL, Power BI, Excel, Bootstrap, and basic Python, with Git and GitHub supporting the workflow.
+          I’m currently completing the DataCamp Data Analyst Career Track. Because I started in front-end development, I care about making data easy to read.
         </p>
         <p>
-          I have worked on portfolio sites and dashboard-style projects, and I like the challenge of making complex information feel straightforward and usable.
+          My skills include Excel, SQL, Power BI, HTML, CSS, JavaScript, React and Tailwind.
         </p>
         <p>
-          My strengths include problem-solving, attention to detail, adaptability, and teamwork. I want to keep growing into a more versatile developer and analyst.
+          My strengths include attention to detail, problem-solving, and teamwork.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           {aboutPoints.map((item) => (

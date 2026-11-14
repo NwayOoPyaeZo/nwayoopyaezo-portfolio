@@ -1,61 +1,62 @@
-import { BarChart3, Code2, Database, Headphones, Lightbulb, Paintbrush } from 'lucide-react';
+import { Code2, Database, Eraser, LayoutDashboard, Lightbulb, Search } from 'lucide-react';
 
 import { site } from '@/lib/site';
 
 import type { HomeHeroStat, HomePortfolioTeaser, HomeServiceTeaser } from '../home.types';
 
-export const specialties = ['Data Analysis', 'Front-End Development', 'SQL & Power BI', 'Responsive Web Design'];
+export const specialties = ['Excel & Power Query', 'SQL', 'Power BI', 'React Front-End'];
 
 export const stats: HomeHeroStat[] = [
-  { label: 'Core focus', value: 'Data + Design' },
-  { label: 'Tools', value: 'SQL, Power BI, React' },
-  { label: 'Approach', value: 'Clear, modular, responsive' },
+  { label: 'Core focus', value: 'Data analysis' },
+  { label: 'Tools', value: 'Excel, SQL, Power BI' },
+  { label: 'Background', value: 'React front-end' },
 ];
 
 export const aboutHighlights = [
-  'HTML, CSS, JavaScript, TypeScript, React, and Bootstrap',
-  'SQL, Power BI, Excel, and basic Python for data workflows',
-  'Git and GitHub for version control and collaboration',
-  'Problem-solving, adaptability, attention to detail, and teamwork',
+  'Excel: PivotTables, Power Query, Power Pivot, DAX measures',
+  'SQL: SQL Server and PostgreSQL, JOINs, window functions',
+  'Power BI (basic): KPI dashboards with slicers',
+  'HTML, CSS, JavaScript, TypeScript, React, Tailwind and Git',
+  'Attention to detail, problem-solving, teamwork',
 ];
 
 export const featuredServices: HomeServiceTeaser[] = [
   {
-    title: 'Data Analysis',
-    description: 'Analyze datasets to uncover trends and patterns, then translate them into actionable decisions.',
-    icon: BarChart3,
+    title: 'Clean messy data',
+    description: 'Fix errors, combine files, and check the numbers before any analysis.',
+    icon: Eraser,
   },
   {
-    title: 'Data Visualization',
-    description: 'Transform complex information into intuitive visuals that help teams move faster.',
-    icon: Paintbrush,
-  },
-  {
-    title: 'Database Administration',
-    description: 'Maintain reliable data operations with performance, security, and organization in mind.',
-    icon: Database,
-  },
-  {
-    title: 'Web Ideas',
-    description: 'Shape concept work into practical layouts and product ideas that are easy to navigate.',
+    title: 'Understand the business problem',
+    description: 'Turn a vague request into a clear question before touching the data.',
     icon: Lightbulb,
   },
   {
-    title: 'Front-End Development',
-    description: 'Build responsive interfaces with modern tooling and a strong visual hierarchy.',
-    icon: Code2,
+    title: 'Pull answers from datasets',
+    description: 'Use Excel, SQL and Power BI to sort, filter and summarise data into clear answers.',
+    icon: Search,
   },
   {
-    title: 'Support',
-    description: 'Provide troubleshooting and practical guidance for web and data workflows.',
-    icon: Headphones,
+    title: 'Tell the story with data',
+    description: 'Turn results into dashboards and short summaries that non-technical people can act on.',
+    icon: LayoutDashboard,
+  },
+  {
+    title: 'Organise data properly',
+    description: 'Design database tables with ERDs and normalization so data stays clean and connected.',
+    icon: Database,
+  },
+  {
+    title: 'Make it easy to use',
+    description: 'Build simple, responsive React interfaces, from my front-end background.',
+    icon: Code2,
   },
 ];
 
 export const featuredPortfolioItems: HomePortfolioTeaser[] = [
   {
     title: 'Databel Customer Churn Analysis',
-    category: 'Data analysis',
+    category: 'Data Analysis',
     description: 'Analyzed customer churn patterns in Excel and translated the findings into practical retention insights.',
     image: site.databelDashboardImage,
     tools: ['Excel'],
@@ -63,7 +64,7 @@ export const featuredPortfolioItems: HomePortfolioTeaser[] = [
   },
   {
     title: 'Budget vs Actual P&L Dashboard',
-    category: 'Financial dashboard',
+    category: 'Data Analysis',
     description: 'Compared budget and actual performance in an interactive dashboard to highlight variances and business trends.',
     image: site.pnlDashboardImage,
     tools: ['Excel', 'Power BI'],

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { site } from '@/lib/site';
@@ -20,14 +20,20 @@ export function ContactDetailsCard() {
         <div className="flex gap-3">
           <Mail className="mt-1 h-4 w-4 shrink-0 text-amber-300" />
           <div className="space-y-1 leading-6">
-            <p>{site.email}</p>
-            <p>{site.alternateEmail}</p>
+            <a href={`mailto:${site.email}`} className="block hover:text-white">{site.email}</a>
+            <a href={`mailto:${site.alternateEmail}`} className="block hover:text-white">{site.alternateEmail}</a>
           </div>
         </div>
         <div className="flex gap-3">
           <Phone className="mt-1 h-4 w-4 shrink-0 text-amber-300" />
           <p className="leading-6">{site.phone}</p>
         </div>
+      </CardContent>
+      <CardContent className="flex gap-3 pt-0 text-sm text-slate-300">
+        <Linkedin className="mt-1 h-4 w-4 shrink-0 text-amber-300" />
+        <a href="https://www.linkedin.com/in/nwayoopyaezo/" target="_blank" rel="noreferrer" className="leading-6 hover:text-white">
+          linkedin.com/in/nwayoopyaezo
+        </a>
       </CardContent>
     </Card>
   );

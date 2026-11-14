@@ -1,6 +1,7 @@
 export const aboutPoints = [
-  'HTML, CSS, JavaScript, TypeScript, React, and Bootstrap',
-  'SQL, Power BI, Excel, and basic Python for data workflows',
-  'Git and GitHub for version control and collaboration',
-  'Problem-solving, adaptability, attention to detail, and teamwork',
+  'Excel: PivotTables, Power Query, Power Pivot, DAX measures',
+  'SQL: SQL Server and PostgreSQL, JOINs, window functions',
+  'Power BI (basic): KPI dashboards with slicers',
+  'HTML, CSS, JavaScript, TypeScript, React, Tailwind and Git',
+  'Attention to detail, problem-solving, teamwork',
 ];

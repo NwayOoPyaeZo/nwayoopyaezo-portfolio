@@ -35,7 +35,7 @@ function Header() {
             </NavLink>
           ))}
           <Button asChild className="ml-3">
-            <NavLink to="/contact">Hire me</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </Button>
         </nav>
 
@@ -59,7 +59,7 @@ function Header() {
               </NavLink>
             ))}
             <Button asChild className="mt-2 w-full">
-              <NavLink to="/contact">Hire me</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </Button>
           </div>
         </div>
@@ -77,7 +77,7 @@ function Footer() {
         <div>
           <p className="text-sm uppercase tracking-[0.3em] text-amber-300">Portfolio</p>
           <p className="mt-2 max-w-xl text-sm leading-6 text-slate-300">
-            {site.name} combines data analysis and front-end development into practical, polished web experiences.
+            Soe Pyae Sone — aspiring data analyst based in Bangkok. Excel, SQL, Power BI and React.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 text-sm text-slate-300">
@@ -86,10 +86,15 @@ function Footer() {
               {item.label}
             </NavLink>
           ))}
+          {site.socials.filter((social) => social.label === 'GitHub' || social.label === 'LinkedIn').map((social) => (
+            <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="rounded-full px-3 py-2 hover:bg-white/5 hover:text-white">
+              {social.label}
+            </a>
+          ))}
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-slate-500">
-        © {year} {site.name}. Built with React, TypeScript, Tailwind, and shadcn-style components.
+        © {year} {site.name}. Built with React, Tailwind, and shadcn-style components.
       </div>
     </footer>
   );

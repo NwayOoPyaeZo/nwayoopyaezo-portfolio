@@ -9,7 +9,7 @@ export function ContactPage() {
     <section className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
       <PageHeader
         eyebrow="Contact"
-        title="Let’s build something clear and useful."
+        title="Open to junior data analyst roles"
       />
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_0.9fr]">

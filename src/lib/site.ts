@@ -3,8 +3,8 @@ const asset = (path: string) => new URL(`../../${path}`, import.meta.url).href;
 export const site = {
   name: 'Soe Pyae Sone',
   alternateName: 'Nway Oo Pyae Zo',
-  title: 'Data Analyst and Front-End Developer',
-  description: 'A portfolio focused on data storytelling, dashboards, and polished front-end experiences.',
+  title: 'Aspiring Data Analyst | Front-End Background',
+  description: 'I’m a Digital Business Technology graduate in Bangkok, building my skills in SQL, Excel and Power BI. This site shows my data projects, along with the React front-end work I’ve done.',
   email: 'nwayoopyaezo@outlook.com',
   alternateEmail: 'nwayoopyaezo@gmail.com',
   phone: '+6680 520 6594',
@@ -13,6 +13,7 @@ export const site = {
   logo: asset('assets/img/logo.svg'),
   heroImage: asset('assets/uploads/portfolio10.png'),
   aboutImage: asset('assets/uploads/portfolio10.png'),
+  frontEndProjectImage: asset('assets/uploads/portfolio101.png'),
   databelDashboardImage: asset('assets/uploads/dataAnalysisProjects/Databel_churned_customers_dashboard.jpg'),
   pnlDashboardImage: asset('assets/uploads/dataAnalysisProjects/P&L analysis.jpg'),
   galleryImages: [
@@ -34,6 +35,6 @@ export const site = {
 export const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
+  { label: 'What I can do', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
 ];
